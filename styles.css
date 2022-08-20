@@ -18,7 +18,7 @@ body{
     width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background-color: rgb(233	221	228);
     border-radius: 10px;
