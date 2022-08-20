@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 body{
@@ -21,11 +20,24 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(233	221	228);
+    border-radius: 10px;
 }
 
 #display{
     height: 20%;
     width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#display-div{
+    padding: 20px;
+    width: 100%;
+    text-align: right;
+    font-size: 30px;
 }
 
 #keys{
@@ -43,14 +55,29 @@ body{
 }
 
 #keys table span{
-    display: inline-block;
+    user-select: none;
     height: 98%;
     width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 30px;
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(255	252	254	);
+}
+
+#keys table tr td:last-child span{
+    background-color: rgb(187,87,74);
+    color: aliceblue;
+}
+
+#keys table tr td:last-child span:hover{
+    background-color: rgb(171, 79, 67);
+}
+#keys table tr td span:hover{
+    background-color: rgb(232, 232, 232);
 }
