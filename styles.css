@@ -28,9 +28,10 @@ body{
     height: 20%;
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #display-div{
@@ -38,6 +39,18 @@ body{
     width: 100%;
     text-align: right;
     font-size: 30px;
+    overflow: hidden;
+}
+
+#eval-dis{
+    padding-right: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+    bottom: 20%;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    color: rgba(0, 0, 0, 0.267);
 }
 
 #keys{
