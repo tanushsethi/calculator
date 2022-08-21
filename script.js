@@ -1,13 +1,17 @@
-function clicked(){
-    if(this.id == "key-ac"){
+function clicked(event){
+    if(event.srcElement.id == "key-="){
         alert("hello");
+    }else{
+        display.innerText += event.srcElement.innerText;
     }
 }
 
 var display = document.getElementById("display-div");
 var keys = document.getElementsByTagName("span");
 
-// for(var i = 0; i< keys.length ; i++){
-    keys[0].addEventListener(onclick, clicked);
-// }
+console.log(keys[0]);
+
+for(var i = 0; i< keys.length ; i++){
+    keys[i].addEventListener('click', clicked);
+}
 
