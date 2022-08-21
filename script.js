@@ -1,6 +1,9 @@
+
 function clicked(event){
-    if(event.srcElement.id == "key-="){
-        alert("hello");
+    if(event.srcElement.innerText == "AC"){
+        display.innerText = "";
+    }else if(event.srcElement.innerText == "="){
+        display.innerText = eval(display.innerText);
     }else{
         display.innerText += event.srcElement.innerText;
     }
