@@ -1,3 +1,4 @@
+//Check for the last element for special Chars
 function checkLast(){
     if(display.innerText.length!=0){
         var last = display.innerText[display.innerText.length-1];
@@ -8,13 +9,16 @@ function checkLast(){
     }
     return true;
 }
-
+//When clicked on span
 function clicked(event){
     var c = event.srcElement.innerText.charCodeAt(0);
+    //If AC Clicked
     if(event.srcElement.innerText == "AC"){
         display.innerText = "";
+    //If Special Char clicked at start except(-)
     }else if(c >=33 && c<=47 && c!=45 && display.innerText.length==0){
             return;
+    //If +/- Clicked
     }else if(event.srcElement.innerText == "+/-"){
         if(display.innerText.length!=0){
             if(display.innerText[0]=="-"){
@@ -30,9 +34,11 @@ function clicked(event){
             }
         }
     }
+    //If = Clicked
     else if(event.srcElement.innerText == "="){
         display.innerText = eval(display.innerText);
         smallDisplay.innerText = "";
+    //If any number clicked
     }else{
         if(display.innerText.length!=0){
             var last = display.innerText[display.innerText.length-1];
@@ -51,9 +57,7 @@ function clicked(event){
 
 var display = document.getElementById("display-div");
 var smallDisplay = document.getElementById("eval-dis");
-
 var keys = document.getElementsByTagName("span");
-
 for(var i = 0; i< keys.length ; i++){
     keys[i].addEventListener('click', clicked);
 }
